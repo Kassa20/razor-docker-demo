@@ -1,0 +1,15 @@
+{
+  "name": "Razor Docker Dev",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:8.0",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "forwardPorts": [8080],
+  "postCreateCommand": "dotnet restore RazorApp/RazorApp.csproj",
+  "portsAttributes": {
+    "8080": {
+      "label": "Razor App",
+      "onAutoForward": "openPreview"
+    }
+  }
+}
